@@ -3387,6 +3387,10 @@ static void R_CreateWorldPipelines ()
 					infos.blend_attachment_states[0].blendEnable = alpha_blend ? VK_TRUE : VK_FALSE;
 					infos.blend_attachment_states[0].colorWriteMask =
 						VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT;
+					infos.blend_attachment_states[0].srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+					infos.blend_attachment_states[0].dstColorBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
+					infos.blend_attachment_states[0].srcAlphaBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+					infos.blend_attachment_states[0].dstAlphaBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
 					infos.blend_attachment_states[1].blendEnable = VK_FALSE;
 					infos.blend_attachment_states[2].blendEnable = VK_FALSE;
 					infos.blend_attachment_states[1].colorWriteMask = 0;
@@ -3439,6 +3443,10 @@ static void R_CreateWorldPipelines ()
 						infos.blend_attachment_states[0].blendEnable = VK_TRUE;
 						infos.blend_attachment_states[0].colorWriteMask =
 							VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT;
+						infos.blend_attachment_states[0].srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+						infos.blend_attachment_states[0].dstColorBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
+						infos.blend_attachment_states[0].srcAlphaBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+						infos.blend_attachment_states[0].dstAlphaBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
 						infos.blend_attachment_states[1].blendEnable = VK_FALSE;
 						infos.blend_attachment_states[2].blendEnable = VK_FALSE;
 						infos.blend_attachment_states[1].colorWriteMask = 0;
@@ -3495,6 +3503,10 @@ static void R_CreateAliasPipelines ()
 
 		infos.depth_stencil_state.depthWriteEnable = alpha_blend ? VK_FALSE : VK_TRUE;
 		infos.blend_attachment_states[0].blendEnable = alpha_blend ? VK_TRUE : VK_FALSE;
+		infos.blend_attachment_states[0].srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+		infos.blend_attachment_states[0].dstColorBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
+		infos.blend_attachment_states[0].srcAlphaBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+		infos.blend_attachment_states[0].dstAlphaBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
 		infos.shader_stages[1].module = alpha_test ? alias_alphatest_frag_module : alias_frag_module;
 		infos.graphics_pipeline.subpass = 0;
 		infos.color_blend_state.attachmentCount = MAIN_COLOR_ATTACHMENT_COUNT;
@@ -3537,6 +3549,10 @@ static void R_CreateAliasPipelines ()
 			infos.blend_attachment_states[0].blendEnable = VK_TRUE;
 			infos.blend_attachment_states[0].colorWriteMask =
 				VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT;
+			infos.blend_attachment_states[0].srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+			infos.blend_attachment_states[0].dstColorBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
+			infos.blend_attachment_states[0].srcAlphaBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+			infos.blend_attachment_states[0].dstAlphaBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
 			infos.blend_attachment_states[1].blendEnable = VK_FALSE;
 			infos.blend_attachment_states[2].blendEnable = VK_FALSE;
 			infos.blend_attachment_states[1].colorWriteMask = 0;
@@ -3623,6 +3639,10 @@ static void R_CreateMD5Pipelines ()
 
 		infos.depth_stencil_state.depthWriteEnable = alpha_blend ? VK_FALSE : VK_TRUE;
 		infos.blend_attachment_states[0].blendEnable = alpha_blend ? VK_TRUE : VK_FALSE;
+		infos.blend_attachment_states[0].srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+		infos.blend_attachment_states[0].dstColorBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
+		infos.blend_attachment_states[0].srcAlphaBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+		infos.blend_attachment_states[0].dstAlphaBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
 		infos.shader_stages[1].module = alpha_test ? alias_alphatest_frag_module : alias_frag_module;
 		infos.graphics_pipeline.subpass = 0;
 		infos.color_blend_state.attachmentCount = MAIN_COLOR_ATTACHMENT_COUNT;
@@ -3665,6 +3685,10 @@ static void R_CreateMD5Pipelines ()
 			infos.blend_attachment_states[0].blendEnable = VK_TRUE;
 			infos.blend_attachment_states[0].colorWriteMask =
 				VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT;
+			infos.blend_attachment_states[0].srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+			infos.blend_attachment_states[0].dstColorBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
+			infos.blend_attachment_states[0].srcAlphaBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+			infos.blend_attachment_states[0].dstAlphaBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
 			infos.blend_attachment_states[1].blendEnable = VK_FALSE;
 			infos.blend_attachment_states[2].blendEnable = VK_FALSE;
 			infos.blend_attachment_states[1].colorWriteMask = 0;
